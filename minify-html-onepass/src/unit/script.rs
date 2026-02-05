@@ -6,16 +6,16 @@ use crate::proc::Processor;
 use aho_corasick::AhoCorasick;
 use aho_corasick::AhoCorasickBuilder;
 use once_cell::sync::Lazy;
-use oxc_allocator::Allocator;
-use oxc_codegen::Codegen;
-use oxc_codegen::CodegenOptions;
-use oxc_codegen::CommentOptions;
-use oxc_minifier::CompressOptions;
-use oxc_minifier::MangleOptions;
-use oxc_minifier::Minifier;
-use oxc_minifier::MinifierOptions;
-use oxc_parser::Parser;
-use oxc_span::SourceType;
+use oxc::allocator::Allocator;
+use oxc::codegen::Codegen;
+use oxc::codegen::CodegenOptions;
+use oxc::codegen::CommentOptions;
+use oxc::minifier::CompressOptions;
+use oxc::minifier::MangleOptions;
+use oxc::minifier::Minifier;
+use oxc::minifier::MinifierOptions;
+use oxc::parser::Parser;
+use oxc::span::SourceType;
 
 static SCRIPT_END: Lazy<AhoCorasick> = Lazy::new(|| {
   AhoCorasickBuilder::new()

@@ -1,15 +1,15 @@
 use crate::cfg::Cfg;
 use minify_html_common::whitespace::trimmed;
-use oxc_allocator::Allocator;
-use oxc_codegen::Codegen;
-use oxc_codegen::CodegenOptions;
-use oxc_codegen::CommentOptions;
-use oxc_minifier::CompressOptions;
-use oxc_minifier::MangleOptions;
-use oxc_minifier::Minifier;
-use oxc_minifier::MinifierOptions;
-use oxc_parser::Parser;
-use oxc_span::SourceType;
+use oxc::allocator::Allocator;
+use oxc::codegen::Codegen;
+use oxc::codegen::CodegenOptions;
+use oxc::codegen::CommentOptions;
+use oxc::minifier::CompressOptions;
+use oxc::minifier::MangleOptions;
+use oxc::minifier::Minifier;
+use oxc::minifier::MinifierOptions;
+use oxc::parser::Parser;
+use oxc::span::SourceType;
 
 /// Represents the mode in which JavaScript should be parsed and minified
 #[derive(Debug, Clone, Copy)]
