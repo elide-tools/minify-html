@@ -21,7 +21,7 @@ lightningcss = "1.0.0-alpha.70"
 memchr = "2"
 minify-html-common = { version = "0.0.3", path = "../minify-html-common" }
 once_cell = "1.21"
-oxc = { git = "https://github.com/elide-dev/oxc", rev = "6562a9b32f8bd2b65db22c6124214a238bde0cea", default-features = false, features = [
+oxc = { git = "https://github.com/elide-dev/oxc", rev = "7bc0f2f33099729f606a971191a79d1fad923a77", default-features = false, features = [
   "full",
   "isolated_declarations",
   "mangler",
