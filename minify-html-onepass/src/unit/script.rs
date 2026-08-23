@@ -60,7 +60,7 @@ pub fn process_script(
       let parser_ret = Parser::new(&allocator, source_text, source_type).parse();
 
       // Only proceed if parsing succeeded without errors
-      if parser_ret.errors.is_empty() {
+      if parser_ret.diagnostics.is_empty() {
         let mut program = parser_ret.program;
 
         // Apply minification
@@ -68,6 +68,7 @@ pub fn process_script(
         let minifier_options = MinifierOptions {
           mangle: Some(MangleOptions::default()),
           compress: Some(CompressOptions::safest()),
+          ..MinifierOptions::default()
         };
         let _minifier_ret = Minifier::new(minifier_options).minify(&allocator, &mut program);
 

@@ -44,6 +44,7 @@ pub fn minify_js(cfg: &Cfg, mode: TopLevelMode, out: &mut Vec<u8>, code: &[u8]) 
         let _minifier_ret = Minifier::new(MinifierOptions {
           mangle: Some(MangleOptions::default()),
           compress: Some(CompressOptions::safest()),
+          ..MinifierOptions::default()
         }).minify(&allocator, &mut program);
 
         // Generate minified code
