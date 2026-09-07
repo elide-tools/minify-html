@@ -11,6 +11,10 @@ edition = "2018"
 [badges]
 maintenance = { status = "actively-developed" }
 
+[features]
+# Shared test fixtures for dependent crates; never enabled in a release build.
+test-data = []
+
 [dependencies]
 ahash = "0.8"
 aho-corasick = "1.1"

@@ -29,3 +29,8 @@ oxc = { version = "0.146", default-features = false, features = [
   "transformer",
   "codegen",
 ] }
+
+[dev-dependencies]
+minify-html-common = { version = "0.0.3", path = "../minify-html-common", features = [
+  "test-data",
+] }
